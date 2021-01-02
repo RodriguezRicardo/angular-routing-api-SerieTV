@@ -3,4 +3,13 @@
   <button (click)="submit(q)">Search</button>
 </p>
 
-{{res | json}}
+<div class="card-columns">
+  <div *ngFor='let sTV of res'>
+    <div class="card" style="width: 18rem;">
+      <img class="card-img-top" src="{{sTV.show.image.medium}}" alt="immagine non c'e'">
+      <div class="card-body">
+          <a class="card-title" [routerLink]="['/serie', sTV.show.id]">{{sTV.show.name}}</a>
+      </div>
+    </div>
+  </div>
+</div>
