@@ -18,4 +18,13 @@ export class SerieTVServiceService {
     let obsSerietv = this.http.get(url, { headers });
     return obsSerietv;
   }
+
+  //metodo per ottenere le inf. della serie tv tramite id(variabile id)
+  serieTV_ID(id : string) {
+    const url = `https://api.tvmaze.com/shows/${id}`;
+    const headers = new HttpHeaders("Content-Type");
+
+    let obsSerietv = this.http.get(url, { headers });
+    return obsSerietv;
+  }
 }

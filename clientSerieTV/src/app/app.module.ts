@@ -6,11 +6,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SearchSerietvComponent } from './search-serietv/search-serietv.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ItemSerietvComponent } from './item-serietv/item-serietv.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SearchSerietvComponent
+    SearchSerietvComponent,
+    ItemSerietvComponent
   ],
   imports: [
     BrowserModule,
