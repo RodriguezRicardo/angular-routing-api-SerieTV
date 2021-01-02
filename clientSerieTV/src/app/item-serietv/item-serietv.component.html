@@ -5,7 +5,7 @@
   <hr>
   <h4>Genres:</h4>
   <div class="card-columns" *ngFor="let s of serieTV.genres">
-    <div class="card bg-warning" style="width: 7rem;">
+    <div class="card bg-warning border border-success" style="width: 7rem;">
       <h4>{{s}}</h4>
     </div>
   </div>
@@ -20,3 +20,5 @@
   <p><b>thetvdb: </b>{{serieTV.externals.thetvdb}}</p>
   <p><b>imdb: </b>{{serieTV.externals.imdb}}</p>
 </div>
+
+<a class="btn btn-warning border border-success" (click)="back()">Back</a>

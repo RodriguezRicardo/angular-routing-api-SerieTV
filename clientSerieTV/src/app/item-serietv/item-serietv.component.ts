@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { ActivatedRoute, ParamMap } from '@angular/router';
 import { SerieTVServiceService } from '../serie-tvservice.service';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-item-serietv',
@@ -15,7 +16,8 @@ export class ItemSerietvComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private service: SerieTVServiceService
+    private service: SerieTVServiceService,
+    private location : Location
   ) { }
 
   ngOnInit(): void {
@@ -30,5 +32,9 @@ export class ItemSerietvComponent implements OnInit {
 
     this.serieServiceObs = this.service.serieTV_ID(serieID);
     this.serieServiceObs.subscribe((data)=>this.serieTV = data);
+  }
+
+  back() : void {
+    this.location.back();
   }
 }
